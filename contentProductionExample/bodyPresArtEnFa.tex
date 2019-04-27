@@ -1,0 +1,1842 @@
+%%% -*- Mode: LaTeX; -*-
+
+%%%#+BEGIN: bx:dblock:global:this-file :disabledP "false" :mode "auto"
+\begin{comment}
+*  #This File: /lcnt/lgpc/bystar/permanent/facilities/contentProductionExample/bodyPresArtEnFa.tex
+\end{comment}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:latex:inputed-title :disabledP "false" :mode "auto"
+\begin{comment}
+*      ================
+*  [[elisp:(beginning-of-buffer)][Top]] ################  [[elisp:(delete-other-windows)][(1)]]   /*PLPC-180060 -- LCNT Panel -- lcntProc.sh, presProc.sh and Mailings*/
+*  [[elisp:(beginning-of-buffer)][Top]] ################  [[elisp:(delete-other-windows)][(1)]]   *ByStar Autonomous Content Production And Administration Examples*
+*  [[elisp:(beginning-of-buffer)][Top]] ################  [[elisp:(delete-other-windows)][(1)]]   http://www.by-star.net/PLPC/180060
+*  [[elisp:(beginning-of-buffer)][Top]] ################  [[elisp:(delete-other-windows)][(1)]]   [[elisp:(find-file "presentationEnFa.ttytex")][Visit ./presentationEnFa.ttytex]] || [[elisp:(find-file "presArtEnFa.ttytex")][Visit ./presArtEnFa.ttytex]] || 
+\end{comment}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:global:org-controls :disabledP "false" :mode "auto"
+\begin{comment}
+*  /Controls/ ::  [[elisp:(org-cycle)][| ]]  [[elisp:(show-all)][Show-All]]  [[elisp:(org-shifttab)][Overview]]  [[elisp:(progn (org-shifttab) (org-content))][Content]] | [[file:Panel.org][Panel]] | [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] | [[elisp:(delete-other-windows)][(1)]] | [[elisp:(progn (save-buffer) (kill-buffer))][S&Q]]  [[elisp:(save-buffer)][Save]]  [[elisp:(kill-buffer)][Quit]] [[elisp:(org-cycle)][| ]]
+*  /Maintain/ ::  [[elisp:(call-interactively (quote cvs-update))][cvs-update]]  [[elisp:(vc-update)][vc-update]] | [[elisp:(bx:org:agenda:this-file-otherWin)][Agenda-List]]  [[elisp:(bx:org:todo:this-file-otherWin)][ToDo-List]] 
+*      ================
+\end{comment}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:latex:commands :disabledP "false" :class "art+pres" :langs "en+fa"
+\begin{comment}
+*      ================
+*      IIM Parameters    ::  [[elisp:(bx:iimBash:resultsShow:cmndLineElems)][Show Cmnd Line Elems]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=build+view")][-p extent=build+view]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=build")][-p extent=build]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=view")][-p extent=view]]
+*      Related           ::  [[elisp:(find-file "./Panel.org")][Visit ./Panel.org]] | [[elisp:(find-file "./mailing/content.mail")][Visit ./mailing/content.mail]]| [[elisp:(find-file "./mailing/Panel.org")][Visit ./mailing/Panel.org]]
+*      Build+Release     ::  [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildResultsRelease" :iifArgs "")][lcntProc.sh -i buildResultsRelease]] || [[elisp:(lsip-local-run-command-here "lcntProc.sh -i fullClean")][lcntProc.sh -i fullClean]] || [[elisp:(cvs-update "." t)][Version Control]]
+*      Build & Preview   ::  [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildPdfPreview" :iifArgs "bodyPresArtEnFa.tex")][lcntProc.sh -i buildPdfPreview bodyPresArtEnFa.tex]] || [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildHtmlPreview" :iifArgs "bodyPresArtEnFa.tex")][lcntProc.sh -i buildHtmlPreview bodyPresArtEnFa.tex]]
+\end{comment}
+%%%#+END:
+
+%%%#+BEGINNOT: bx:dblock:global:org-contents-list :disabledP "false" :mode "auto"
+\begin{comment}
+*      ################ CONTENTS-LIST  ([[elisp:(reftex-toc)][RefTOC)]]    ###############
+*  [[elisp:(org-cycle)][| ]]  *Document Status, TODOs and Notes*          ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+%%%#+END:
+
+\begin{comment}
+** TODO [[elisp:(org-cycle)][| ]]  Idea      ::  Description   [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+%%%#+BEGINNOT: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Overview" :toc "0"
+%%%% Args:  :toc "NU" :part "NU" :label "auto|spec"
+\begin{comment}
+*      ================
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  *Part 0*   /Overview/ ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\newpage
+\part{Overview}
+
+\begin{latexonly}
+  \begin{presentationMode}
+
+    \begin{frame}
+      \partpage
+    \end{frame}
+    
+\begin{frame}[fragile,plain,label=Part0]
+\frametitle{Outline of This Part -- Overview}
+\tableofcontents[sectionstyle=show,subsectionstyle=show]
+\end{frame}
+\end{presentationMode}
+\end{latexonly}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Assumptions -- Pre-Requisites -- This Is A How-To Document"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Assumptions -- Pre-Requisites -- This Is A How-To Document ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Assumptions -- Pre-Requisites -- This Is A How-To Document}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :mode "auto" :seg-title "Pre-Requisites And Related Topics"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Pre-Requisites And Related Topics ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Pre-Requisites And Related Topics}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Pre-Requisites And Related Topics" :subtitle "" :label "auto" 
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=Pre-RequisitesAndRelatedTopics*  Pre-Requisites And Related Topics ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=Pre-RequisitesAndRelatedTopics]
+    \frameaudio{"audio/Pre-RequisitesAndRelatedTopics.mp3"}
+    \frametitle{Pre-Requisites And Related Topics}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('Pre-RequisitesAndRelatedTopics', 'always', 'True')
+%BxPy: impressiveFrameParSet('Pre-RequisitesAndRelatedTopics', 'transition', 'UnSpecified')
+%%%#+END:
+
+    This is a ``How-To'' document.
+
+    \bigskip
+
+    It assumes that you are already familiar with ByStar Content Production And Administration Concepts.
+
+    The following related documents are available.
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :mode "auto" :seg-title "Pointers To Related Topics And Documents"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Pointers To Related Topics And Documents ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Pointers To Related Topics And Documents}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Pointers To Related Topics And Documents" :subtitle "" :label "auto" 
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=PointersToRelatedTopicsAndDocuments*  Pointers To Related Topics And Documents ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=PointersToRelatedTopicsAndDocuments]
+    \frameaudio{"audio/PointersToRelatedTopicsAndDocuments.mp3"}
+    \frametitle{Pointers To Related Topics And Documents}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('PointersToRelatedTopicsAndDocuments', 'always', 'True')
+%BxPy: impressiveFrameParSet('PointersToRelatedTopicsAndDocuments', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:latex:mention-lcnt :cite "disabled" :lcnt-nu "PLPC-180038"
+
+\begin{comment}
+***** DBLOCK -- mention-lcnt PLPC-180038
+\end{comment}
+
+\begin{quote}
+  \textbf{ByStar Autonomous Content Collaborative-Authorship, Generation, Publication, and Distribution Software And Services}\\
+  \href{http://www.by-star.net/PLPC/180038}{http://www.by-star.net/PLPC/180038}
+\end{quote}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:latex:mention-lcnt :cite "disabled" :lcnt-nu "PLPC-180016"
+
+\begin{comment}
+***** DBLOCK -- mention-lcnt PLPC-180016
+\end{comment}
+
+\begin{quote}
+  \textbf{The Libre-Halaal ByStar Digital Ecosystem}\\
+  \textbf{A Unified and Non-Proprietary Model For Autonomous Internet Services}\\
+  \textbf{A Moral Alterantive To The Proprietary American Digital Ecosystem}\\
+  \href{http://www.by-star.net/PLPC/180016}{http://www.by-star.net/PLPC/180016}
+\end{quote}
+%%%#+END:
+
+
+\end{frame}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Scope And Contours Of This Examples And How-To Document"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Scope And Contours Of This Examples And How-To Document ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Scope And Contours Of This Examples And How-To Document}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :mode "auto" :seg-title "How-To -- Topics Overview"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   How-To -- Topics Overview ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{How-To -- Topics Overview}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "How-To -- Topics Overview" :subtitle "" :label "auto" 
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=How-To--TopicsOverview*  How-To -- Topics Overview ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=How-To--TopicsOverview]
+    \frameaudio{"audio/How-To--TopicsOverview.mp3"}
+    \frametitle{How-To -- Topics Overview}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('How-To--TopicsOverview', 'always', 'True')
+%BxPy: impressiveFrameParSet('How-To--TopicsOverview', 'transition', 'UnSpecified')
+%%%#+END:
+
+Multi-Media Content Authorship -- Integration Of Multi-Lingual Text + Images + Audio + Video 
+
+\begin{itemize}
+\item Base And Template Selection
+\item MetaData Configuration And Editing
+\item Creating Frames And Adding Text
+\item Adding Images
+\item Preparing For Multimedia Additions
+\item Narration -- Voice-Over Recordings
+\item Video Additions -- Recordings and Screen Captures
+\item Publication
+\item Mailings And Distribution
+\end{itemize}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Obtaining The Sources Of This Document -- Obtaing BISOS And Related Components"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Obtaining The Sources Of This Document -- Obtaing BISOS And Related Components ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Obtaining The Sources Of This Document -- Obtaing BISOS And Related Components}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :mode "auto" :seg-title "Obtaining Source Of This Document -- Pointers To Git Repos"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Obtaining Source Of This Document -- Pointers To Git Repos ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Obtaining Source Of This Document -- Pointers To Git Repos}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Obtaining Source Of This Document -- Pointers To Git Repos" :subtitle "" :label "auto" 
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ObtainingSourceOfThisDocument--PointersToGitRepos*  Obtaining Source Of This Document -- Pointers To Git Repos ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ObtainingSourceOfThisDocument--PointersToGitRepos]
+    \frameaudio{"audio/ObtainingSourceOfThisDocument--PointersToGitRepos.mp3"}
+    \frametitle{Obtaining Source Of This Document -- Pointers To Git Repos}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('ObtainingSourceOfThisDocument--PointersToGitRepos', 'always', 'True')
+%BxPy: impressiveFrameParSet('ObtainingSourceOfThisDocument--PointersToGitRepos', 'transition', 'UnSpecified')
+%%%#+END:
+
+    NOTYET
+    
+\end{frame}
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :mode "auto" :seg-title "Obtaining BISOS And Related Components"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Obtaining BISOS And Related Components ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Obtaining BISOS And Related Components}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Obtaining Source Of This Document -- Pointers To Git Repos" :subtitle "" :label "auto" 
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ObtainingSourceOfThisDocument--PointersToGitRepos*  Obtaining Source Of This Document -- Pointers To Git Repos ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ObtainingSourceOfThisDocument--PointersToGitRepos]
+    \frameaudio{"audio/ObtainingSourceOfThisDocument--PointersToGitRepos.mp3"}
+    \frametitle{Obtaining Source Of This Document -- Pointers To Git Repos}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('ObtainingSourceOfThisDocument--PointersToGitRepos', 'always', 'True')
+%BxPy: impressiveFrameParSet('ObtainingSourceOfThisDocument--PointersToGitRepos', 'transition', 'UnSpecified')
+%%%#+END:
+
+    Obtaining BISOS
+
+    Obatining related Components
+    
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Initial Selections: BxIO/Repo, Content Base, Content Language And Content Form" :toc "0"
+%%%% Args:  :toc "NU" :part "NU" :label "auto|spec"
+\begin{comment}
+*      ================
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  *Part 0*   /Initial Selections: BxIO/Repo, Content Base, Content Language And Content Form/ ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\newpage
+\part{Initial Selections: BxIO/Repo, Content Base, Content Language And Content Form}
+
+\begin{latexonly}
+\begin{presentationMode}
+\begin{frame}[fragile,plain,label=Part0]
+\frametitle{Outline of This Part -- Initial Selections: BxIO/Repo, Content Base, Content Language And Content Form}
+\tableofcontents[sectionstyle=show,subsectionstyle=show]
+\end{frame}
+\end{presentationMode}
+\end{latexonly}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "BxIO/Repo Selection"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   BxIO/Repo Selection ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{BxIO/Repo Selection}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "BxIO/Repo Selection" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=BxIO/RepoSelection*  BxIO/Repo Selection ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=BxIO_2FRepoSelection]
+    \transition{default}
+    \frameaudio{"audio/BxIO_2FRepoSelection.mp3"}
+    \frametitle{BxIO/Repo Selection}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('BxIO_2FRepoSelection', 'always', 'True')
+%BxPy: impressiveFrameParSet('BxIO_2FRepoSelection', 'transition', 'default')
+%%%#+END:
+
+\begin{itemize}
+\item Sources for production of content are kept in:
+  \begin{itemize}
+  \item Git Repos
+  \item ByStar Information Object Containers
+  \end{itemize}
+\item Decide on which BxIO/Repo you want to allocate to the content.
+\item If needed create a Git Repo or a BxIO for the content.
+\end{itemize}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Content Base Creation"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Content Base Creation ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Content Base Creation}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Content Base Creation" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ContentBaseCreation*  Content Base Creation ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ContentBaseCreation]
+    \transition{default}
+    \frameaudio{"audio/ContentBaseCreation.mp3"}
+    \frametitle{Content Base Creation}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('ContentBaseCreation', 'always', 'True')
+%BxPy: impressiveFrameParSet('ContentBaseCreation', 'transition', 'default')
+%%%#+END:
+
+Within the selected BxIO/Repo you now need to create a base for the content
+    
+\begin{itemize}
+\item cd to BxIO/Repo
+\item mkdir contentBase
+\item cd contentBase
+\end{itemize}
+
+For example,  /lcnt/lgpc/examples/permanent/bxde/en+fa/pres+art/ex1
+
+\end{frame}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Content Languages Selection"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Content Languages Selection ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Content Languages Selection}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Content Languages Selection" :subtitle "Multilingualization" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ContentLanguagesSelection*  Content Languages Selection ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ContentLanguagesSelection]
+    \transition{default}
+    \frameaudio{"audio/ContentLanguagesSelection.mp3"}
+    \frametitle{Content Languages Selection}
+    \framesubtitle{Multilingualization}
+%BxPy: impressiveFrameParSet('ContentLanguagesSelection', 'always', 'True')
+%BxPy: impressiveFrameParSet('ContentLanguagesSelection', 'transition', 'default')
+%%%#+END:
+
+\begin{itemize}
+\item Decide On Primary Language Direction  -- en+fa=l2r  fa+en=r2l fa=r2l en=l2r
+\item Decide On Secondary Languages If Any -- english, farsi
+\item Combine The Primary And Secondary Languages -- en+fa, fa+en
+\item When Only The Primary Langauge Is Needed, Just Select That -- en, fa
+\end{itemize}
+
+Even when your text is expected to be in a single language, it is
+still a good idea to select more than one language so that
+multi-lingualization support is in place.
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Content Forms Selection"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Content Forms Selection ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Content Forms Selection}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Content Forms Selection" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ContentFormsSelection*  Content Forms Selection ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ContentFormsSelection]
+    \transition{default}
+    \frameaudio{"audio/ContentFormsSelection.mp3"}
+    \frametitle{Content Forms Selection}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('ContentFormsSelection', 'always', 'True')
+%BxPy: impressiveFrameParSet('ContentFormsSelection', 'transition', 'default')
+%%%#+END:
+
+\begin{itemize}
+\item Decide on Desired forms -- Presentation, Article+Presentation, Article --  Memo, WebPage, Mailings
+\item Article form can also be: Memo, WebPage, Mailings
+\item Presentation form can also be: WebSlider
+\item When wishing to have both Presentation And Article forms, one needs to be considered primary.
+  pres+art and art+pres are slightly different.
+\end{itemize}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Build A Starting Point For Content Development And Processing"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Build A Starting Point For Content Development And Processing ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Build A Starting Point For Content Development And Processing}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Content Language And Form Selection" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ContentLanguageAndFormSelection*  Content Language And Form Selection ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ContentLanguageAndFormSelection]
+    \transition{default}
+    \frameaudio{"audio/ContentLanguageAndFormSelection.mp3"}
+    \frametitle{Content Language And Form Selection}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('ContentLanguageAndFormSelection', 'always', 'True')
+%BxPy: impressiveFrameParSet('ContentLanguageAndFormSelection', 'transition', 'default')
+%%%#+END:
+
+Based on your languages selection and your forms selection you can now create a starting point 
+    
+\begin{itemize}
+\item lcnLcntGens.sh -- is used to create starting points for content development
+\item In CntnBaseDir, run lcnLcntGens.sh -- 
+\item From the offered list, select  languages and forms 
+% \item In CntnBaseDir, Re-Run dblock Updates
+% \item From Panel.org build all desired forms of the document
+% \item Iterate through additional of information to the content -- bodyArticleEnFa.tex, bodyPresArtEnFa.tex
+\end{itemize}
+
+Running that, auto assigns a ``Content Number'' for you.
+
+Your BxIO/Repo and location determines Author, organization and Publications Destinations.
+
+In CntnBaseDir you now have starting point tex files, lcntProc.sh, panel.org and LCNT-INFO.
+
+\begin{itemize}
+\item NOTYET -- Text from lcnLcntRoadmap.sh comes here
+\end{itemize}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Metadata Configuration -- Build Verification And General Orientation" :toc "0" :label "auto"
+%%%% Args:  :toc "NU" :part "NU" :label "auto|spec"
+\begin{comment}
+*      ================
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  *Part 0*   /Metadata Configuration -- Build Verification And General Orientation/ ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\newpage
+\part{Metadata Configuration -- Build Verification And General Orientation}
+\label{part:MetadataConfiguration--BuildVerificationAndGeneralOrientation}
+
+\begin{latexonly}
+\begin{presentationMode}
+\begin{frame}[fragile,plain,label=Part0]
+\frametitle{Outline of This Part -- Metadata Configuration -- Build Verification And General Orientation}
+\tableofcontents[sectionstyle=show,subsectionstyle=show]
+\end{frame}
+\end{presentationMode}
+\end{latexonly}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Metadata Configuration"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Metadata Configuration ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Metadata Configuration}
+%%%#+END:
+
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-full-begin :mode "auto" :title "Metadata Configuration" :subtitle "" :label "auto" :options "fragile" :audio "labeled" :transition "Trans" :onLeave "OnLeave"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=MetadataConfiguration*  Metadata Configuration ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=MetadataConfiguration]
+    \transition{Trans}
+    \transitionout{OnLeave}
+    \frameaudio{"audio/MetadataConfiguration.mp3"}
+    \frametitle{Metadata Configuration}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('MetadataConfiguration', 'always', 'True')
+%BxPy: impressiveFrameParSet('MetadataConfiguration', 'transition', 'Trans')
+%%%#+END:
+
+\begin{itemize}
+\item lcnLcntGens.sh has created for you LCNT-INFO with initial values. You may need to configure these values.
+  
+\item Run: lcntProc.sh -v -n showRun -i editLcntInfo mainTitle shortTitle subTitle subSubTitle description
+  to specify the name/title of your content.
+\item Run: lcntProc.sh -i dblockUpdateFile articleEnFa.ttytex presentationEnFa.ttytex presArtEnFa.ttytex
+  to update all relevant dblocks to reflect the changes that you made to the LCNT-INFO metadata.
+\end{itemize}
+
+You now have a starting point. You can next build this initial content.
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Build Verification"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Build Verification ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Build Verification}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Different Ways of Building The Content" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=DifferentWaysofBuildingTheContent*  Different Ways of Building The Content ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=DifferentWaysofBuildingTheContent]
+    \transition{default}
+    \frameaudio{"audio/DifferentWaysofBuildingTheContent.mp3"}
+    \frametitle{Different Ways of Building The Content}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('DifferentWaysofBuildingTheContent', 'always', 'True')
+%BxPy: impressiveFrameParSet('DifferentWaysofBuildingTheContent', 'transition', 'default')
+%%%#+END:
+
+    Three different ways of processing your content.
+
+    \begin{itemize}
+    \item Command-Line Bash ICM -- lcntProc.sh
+    \item ICM Panel -- Panel.org
+    \item Org bash command from within LaTeX sources in org-mode
+    \end{itemize}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "Content Processing -- With lcntProc.sh"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Content Processing -- With lcntProc.sh ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Content Processing -- With lcntProc.sh}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-full-begin :mode "auto" :title "Content Processing -- With lcntProc.sh" :subtitle "" :label "auto" :options "fragile" :audio "labeled" :transition "Trans" :onLeave "OnLeave"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ContentProcessing--WithlcntProc.sh*  Content Processing -- With lcntProc.sh ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ContentProcessing--WithlcntProc.sh]
+    \transition{Trans}
+    \transitionout{OnLeave}
+    \frameaudio{"audio/ContentProcessing--WithlcntProc.sh.mp3"}
+    \frametitle{Content Processing -- With lcntProc.sh}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('ContentProcessing--WithlcntProc.sh', 'always', 'True')
+%BxPy: impressiveFrameParSet('ContentProcessing--WithlcntProc.sh', 'transition', 'Trans')
+%%%#+END:
+
+\begin{itemize}
+\item lcntProc.sh
+\item lcntProc.sh -i fullUpdate
+\item lcntProc.sh -i fullClean
+\item lcnLcntInputProc.sh -p inFormat=xelatex -p outputs=pdf -i buildDocs  presentationEnFa.ttytex
+\item lcnLcntInputProc.sh -p inFormat=xelatex -p outputs=heveaHtml -i buildDocs  presentationEnFa.ttytex
+\end{itemize}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "Content Processing -- With Panel.org"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Content Processing -- With Panel.org ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Content Processing -- With Panel.org}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Content Processing -- With Panel.org" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ContentProcessing--WithPanel.org*  Content Processing -- With Panel.org ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ContentProcessing--WithPanel.org]
+    \transition{default}
+    \frameaudio{"audio/ContentProcessing--WithPanel.org.mp3"}
+    \frametitle{Content Processing -- With Panel.org}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('ContentProcessing--WithPanel.org', 'always', 'True')
+%BxPy: impressiveFrameParSet('ContentProcessing--WithPanel.org', 'transition', 'default')
+%%%#+END:
+
+    \begin{itemize}
+    \item Visit Panel.org
+    \item Select ``run mode''
+    \item Just click on what you want
+    \end{itemize}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "Content Processing -- From LaTeX Sources"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Content Processing -- From LaTeX Sources ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Content Processing -- From LaTeX Sources}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Content Processing -- From LaTeX Sources" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ContentProcessing--FromLaTeXSources*  Content Processing -- From LaTeX Sources ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ContentProcessing--FromLaTeXSources]
+    \transition{default}
+    \frameaudio{"audio/ContentProcessing--FromLaTeXSources.mp3"}
+    \frametitle{Content Processing -- From LaTeX Sources}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('ContentProcessing--FromLaTeXSources', 'always', 'True')
+%BxPy: impressiveFrameParSet('ContentProcessing--FromLaTeXSources', 'transition', 'default')
+%%%#+END:
+
+    \begin{itemize}
+    \item Visit any of presentationEnFa.ttytex articleEnFa.ttytex bodyPresArtEnFa.tex
+    \item Switch to org-mode Overview -- [F12-F12]
+    \item Click on Build \& Preview Choices
+    \end{itemize}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Adding Structure And Multilingual Text" :toc "0" :label "auto"
+%%%% Args:  :toc "NU" :part "NU" :label "auto|spec"
+\begin{comment}
+*      ================
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  *Part 0*   /Adding Structure And Multilingual Text/ ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\newpage
+\part{Adding Structure And Multilingual Text}
+\label{part:AddingStructureAndMultilingualText}
+
+\begin{latexonly}
+\begin{presentationMode}
+\begin{frame}[fragile,plain,label=Part0]
+\frametitle{Outline of This Part -- Adding Structure And Multilingual Text}
+\tableofcontents[sectionstyle=show,subsectionstyle=show]
+\end{frame}
+\end{presentationMode}
+\end{latexonly}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Common To All Forms Features"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Common To All Forms Features ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Common To All Forms Features}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "MasterLangs.ttytex and BodyForm.Langstex Canonicalization"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   MasterLangs.ttytex and BodyForm.Langstex Canonicalization ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{MasterLangs.ttytex and BodyForm.Langstex Canonicalization}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Multilingualization Features" :subtitle "Left-To-Right Masters" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=MultilingualizationFeatures*  Multilingualization Features ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=MultilingualizationFeatures]
+    \transition{default}
+    \frameaudio{"audio/MultilingualizationFeatures.mp3"}
+    \frametitle{Multilingualization Features}
+    \framesubtitle{Left-To-Right Masters}
+%BxPy: impressiveFrameParSet('MultilingualizationFeatures', 'always', 'True')
+%BxPy: impressiveFrameParSet('MultilingualizationFeatures', 'transition', 'default')
+%%%#+END:
+
+    
+    \begin{itemize}
+    \item presentationEnFa.ttytex and presArtEnFa.ttytex input bodyPresArtEnFa.tex
+    \item articleEnFa.ttytex input bodyArticleEnFa.tex
+    \end{itemize}
+
+    .ttytex files are NOT intended to be considered ``generally editable''.\\
+    They are driven by LCNT-INFO metadata through dblock updates.\\
+    They are customized by dblock argument selections\\
+    They are extended by \\inputs additions.
+
+    \begin{itemize}
+    \item bodyPresArtEnFa.tex has presentation form content
+    \item bodyArticleEnFa.tex has article form content
+    \end{itemize}
+
+    It is possible to use conditional common text to use within both forms.
+    
+\end{frame}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "Conditional Processing Features"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Conditional Processing Features ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Conditional Processing Features}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Conditional Processing Features" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ConditionalProcessingFeatures*  Conditional Processing Features ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ConditionalProcessingFeatures]
+    \transition{default}
+    \frameaudio{"audio/ConditionalProcessingFeatures.mp3"}
+    \frametitle{Conditional Processing Features}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('ConditionalProcessingFeatures', 'always', 'True')
+%BxPy: impressiveFrameParSet('ConditionalProcessingFeatures', 'transition', 'default')
+%%%#+END:
+
+    
+    \begin{itemize}
+    \item begin{presentationMode}  -- ByStar-Extention (LaTeX and HeVeA)
+    \item begin{articleMode} -- ByStar-Extention (LaTeX and HeVeA)
+    \end{itemize}
+
+    \begin{itemize}
+    \item latexonly  -- HeVeA provided
+    \item htmlonly   -- HeVeA provided
+    \item rawhtml    -- HeVeA provided
+    \end{itemize}
+
+\end{frame}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "Multilingualization Features In Left-To-Right Masters"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Multilingualization Features In Left-To-Right Masters ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Multilingualization Features In Left-To-Right Masters}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Multilingualization Features" :subtitle "Left-To-Right Masters" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=MultilingualizationFeatures*  Multilingualization Features ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=MultilingualizationFeatures]
+    \transition{default}
+    \frameaudio{"audio/MultilingualizationFeatures.mp3"}
+    \frametitle{Multilingualization Features}
+    \framesubtitle{Left-To-Right Masters}
+%BxPy: impressiveFrameParSet('MultilingualizationFeatures', 'always', 'True')
+%BxPy: impressiveFrameParSet('MultilingualizationFeatures', 'transition', 'default')
+%%%#+END:
+
+    \begin{itemize}
+    \item right-to-left
+    \end{itemize}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "Multilingualization Features In Right-To-Left Masters"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Multilingualization Features In Right-To-Left Masters ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Multilingualization Features In Right-To-Left Masters}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Multilingualization Features" :subtitle "Right-To-Left Masters" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=MultilingualizationFeatures*  Multilingualization Features ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=MultilingualizationFeatures]
+    \transition{default}
+    \frameaudio{"audio/MultilingualizationFeatures.mp3"}
+    \frametitle{Multilingualization Features}
+    \framesubtitle{Right-To-Left Masters}
+%BxPy: impressiveFrameParSet('MultilingualizationFeatures', 'always', 'True')
+%BxPy: impressiveFrameParSet('MultilingualizationFeatures', 'transition', 'default')
+%%%#+END:
+
+    \begin{itemize}
+    \item right-to-left
+    \end{itemize}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Presentation Form Features"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Presentation Form Features ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Presentation Form Features}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Different Ways of Building The Content" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=DifferentWaysofBuildingTheContent*  Different Ways of Building The Content ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=DifferentWaysofBuildingTheContent]
+    \transition{default}
+    \frameaudio{"audio/DifferentWaysofBuildingTheContent.mp3"}
+    \frametitle{Different Ways of Building The Content}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('DifferentWaysofBuildingTheContent', 'always', 'True')
+%BxPy: impressiveFrameParSet('DifferentWaysofBuildingTheContent', 'transition', 'default')
+%%%#+END:
+
+    \begin{itemize}
+    \item DB-Frames Snippets
+    \item Frame Contents Snippets
+    \end{itemize}
+
+\end{frame}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "Structure Of Presentation Form Content"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Structure Of Presentation Form Content ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Structure Of Presentation Form Content}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Structure Of Presentation Form Content" :subtitle "" :label "auto" 
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=StructureOfPresentationFormContent*  Structure Of Presentation Form Content ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=StructureOfPresentationFormContent]
+    \frameaudio{"audio/StructureOfPresentationFormContent.mp3"}
+    \frametitle{Structure Of Presentation Form Content}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('StructureOfPresentationFormContent', 'always', 'True')
+%BxPy: impressiveFrameParSet('StructureOfPresentationFormContent', 'transition', 'UnSpecified')
+%%%#+END:
+
+    begin{section}  -- Snippets -> bx-latex-mode -> Parts DBlock
+    
+    \begin{itemize}
+
+    \item Frame Head   -- Snippets -> bx-latex-mode -> DB-Frames
+      \begin{itemize}
+      \item Frame Body   -- Snippets -> bx-latex-mode -> Frames-Content
+      \end{itemize}
+    \item Frame Head+Body   -- Snippets -> bx-latex-mode -> DB-Frames Plus
+    \item Frame Inputed Body 
+    \item Videoed-Frame as Frame Inputed Body --
+    \item Frame End    -- end{frame}
+    \end{itemize}
+
+\end{frame}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "DB-Frames Snippets"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   DB-Frames Snippets ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{DB-Frames Snippets}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "DB-Frames Snippets" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=DB-FramesSnippets*  DB-Frames Snippets ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=DB-FramesSnippets]
+    \transition{default}
+    \frameaudio{"audio/DB-FramesSnippets.mp3"}
+    \frametitle{DB-Frames Snippets}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('DB-FramesSnippets', 'always', 'True')
+%BxPy: impressiveFrameParSet('DB-FramesSnippets', 'transition', 'default')
+%%%#+END:
+
+    YASnippets:
+
+    \begin{itemize}
+    \item Basic vs Narrated  -- Narrated include audio
+    \item Plain Vs Contained  -- Contained includes toc headers
+    \end{itemize}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "Frame Content Snippets"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Frame Content Snippets ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Frame Content Snippets}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Frame Content Snippets" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=FrameContentSnippets*  Frame Content Snippets ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=FrameContentSnippets]
+    \transition{default}
+    \frameaudio{"audio/FrameContentSnippets.mp3"}
+    \frametitle{Frame Content Snippets}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('FrameContentSnippets', 'always', 'True')
+%BxPy: impressiveFrameParSet('FrameContentSnippets', 'transition', 'default')
+%%%#+END:
+
+    YASnippets:
+
+    \begin{itemize}
+    \item Frame Notes  -- Shows up in artPres form and with pdfpc
+    \item Alert, Basic, Example
+    \end{itemize}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Article Form Features"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Article Form Features ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Article Form Features}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Article Form Features" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ArticleFormFeatures*  Article Form Features ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ArticleFormFeatures]
+    \transition{default}
+    \frameaudio{"audio/ArticleFormFeatures.mp3"}
+    \frametitle{Article Form Features}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('ArticleFormFeatures', 'always', 'True')
+%BxPy: impressiveFrameParSet('ArticleFormFeatures', 'transition', 'default')
+%%%#+END:
+
+    \begin{itemize}
+    \item RefTeX Mode -- ref, cite, index
+    \item Glossaries
+    \end{itemize}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "RefTeX Mode -- ref, cite, index"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   RefTeX Mode -- ref, cite, index ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{RefTeX Mode -- ref, cite, index}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "RefTeX Mode" :subtitle "ref, cite, index" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=RefTeXMode*  RefTeX Mode ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=RefTeXMode]
+    \transition{default}
+    \frameaudio{"audio/RefTeXMode.mp3"}
+    \frametitle{RefTeX Mode}
+    \framesubtitle{ref, cite, index}
+%BxPy: impressiveFrameParSet('RefTeXMode', 'always', 'True')
+%BxPy: impressiveFrameParSet('RefTeXMode', 'transition', 'default')
+%%%#+END:
+
+    RefTeX Mode:
+
+    \begin{itemize}
+    \item ref
+    \item cite
+    \item index
+    \end{itemize}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "Glossaries"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Glossaries ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Glossaries}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Glossaries" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=Glossaries*  Glossaries ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=Glossaries]
+    \transition{default}
+    \frameaudio{"audio/Glossaries.mp3"}
+    \frametitle{Glossaries}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('Glossaries', 'always', 'True')
+%BxPy: impressiveFrameParSet('Glossaries', 'transition', 'default')
+%%%#+END:
+
+    YASnippets:
+
+    \begin{itemize}
+    \item Frame Notes  -- Shows up in artPres form and with pdfpc
+    \item Alert, Basic, Example
+    \end{itemize}
+
+\end{frame}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Adding Images -- Figures And Pictures" :toc "0" :label "auto"
+%%%% Args:  :toc "NU" :part "NU" :label "auto|spec"
+\begin{comment}
+*      ================
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  *Part 0*   /Adding Images -- Figures And Pictures/ ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\newpage
+\part{Adding Images -- Figures And Pictures}
+\label{part:AddingImages--FiguresAndPictures}
+
+\begin{latexonly}
+\begin{presentationMode}
+\begin{frame}[fragile,plain,label=Part0]
+\frametitle{Outline of This Part -- Adding Images -- Figures And Pictures}
+\tableofcontents[sectionstyle=show,subsectionstyle=show]
+\end{frame}
+\end{presentationMode}
+\end{latexonly}
+%%%#+END:
+
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Adding Images -- Figures And Pictures"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Adding Images -- Figures And Pictures ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Adding Images -- Figures And Pictures}
+%%%#+END:
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-full-begin :mode "auto" :title "Adding Images And Figures" :subtitle "" :label "auto" :options "fragile" :audio "labeled" :transition "Trans" :onLeave "OnLeave"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=AddingImagesAndFigures*  Adding Images And Figures ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=AddingImagesAndFigures]
+    \transition{Trans}
+    \transitionout{OnLeave}
+    \frameaudio{"audio/AddingImagesAndFigures.mp3"}
+    \frametitle{Adding Images And Figures}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('AddingImagesAndFigures', 'always', 'True')
+%BxPy: impressiveFrameParSet('AddingImagesAndFigures', 'transition', 'Trans')
+%%%#+END:
+
+    \begin{itemize}
+      % \item Within Blee, In YASnippet, Select bx-latex-mode -- Multi-Media Dblock -- Image ODG
+      % \item Specify a path to the .odg file
+      % \item Update the dblock
+      % \item From Panel.org -- Re-Build all forms and formats to verify
+    \item Producing Images
+    \item Processing Images      
+    \item Including Images
+    \end{itemize}
+
+\end{frame}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Producing Images"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Producing Images ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Producing Images}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "Drawing With libreoffice-draw"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Drawing With libreoffice-draw ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Drawing With libreoffice-draw}
+%%%#+END:
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Drawing With libreoffice-draw" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=DrawingWithlibreoffice-draw*  Drawing With libreoffice-draw ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=DrawingWithlibreoffice-draw]
+    \transition{default}
+    \frameaudio{"audio/DrawingWithlibreoffice-draw.mp3"}
+    \frametitle{Drawing With libreoffice-draw}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('DrawingWithlibreoffice-draw', 'always', 'True')
+%BxPy: impressiveFrameParSet('DrawingWithlibreoffice-draw', 'transition', 'default')
+%%%#+END:
+
+    \begin{itemize}
+      \item Within Blee, In YASnippet, Select bx-latex-mode -- Multi-Media Dblock -- Image ODG
+      \item Specify a path to the .odg file
+      \item Update the dblock
+      \item From Panel.org -- Re-Build all forms and formats to verify
+    \end{itemize}
+
+
+\end{frame}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Processing Images"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Processing Images ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Processing Images}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "Configuring And Running figProc.sh"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Configuring And Running figProc.sh ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Configuring And Running figProc.sh}
+%%%#+END:
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Configuring And Running figProc.sh" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ConfiguringAndRunningfigProc.sh*  Configuring And Running figProc.sh ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ConfiguringAndRunningfigProc.sh]
+    \transition{default}
+    \frameaudio{"audio/ConfiguringAndRunningfigProc.sh.mp3"}
+    \frametitle{Configuring And Running figProc.sh}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('ConfiguringAndRunningfigProc.sh', 'always', 'True')
+%BxPy: impressiveFrameParSet('ConfiguringAndRunningfigProc.sh', 'transition', 'default')
+%%%#+END:
+
+
+    \begin{itemize}
+    \item .odg  -> figProc.sh -> .pdf, .eps
+    \item .odg  -> figProc.sh -> -caption.tex      
+    \end{itemize}
+
+\end{frame}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Including Images"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Including Images ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Including Images}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-subsection :disabledP "false" :seg-title "Insert Image Dblock And Update"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Subsection/   Insert Image Dblock And Update ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\subsection{Insert Image Dblock And Update}
+%%%#+END:
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "Configuring And Running figProc.sh" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ConfiguringAndRunningfigProc.sh*  Configuring And Running figProc.sh ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ConfiguringAndRunningfigProc.sh]
+    \transition{default}
+    \frameaudio{"audio/ConfiguringAndRunningfigProc.sh.mp3"}
+    \frametitle{Configuring And Running figProc.sh}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('ConfiguringAndRunningfigProc.sh', 'always', 'True')
+%BxPy: impressiveFrameParSet('ConfiguringAndRunningfigProc.sh', 'transition', 'default')
+%%%#+END:
+
+
+    \begin{itemize}
+    \item .odg  -> figProc.sh -> .pdf, .eps
+    \item .odg  -> figProc.sh -> -caption.tex      
+    \end{itemize}
+
+  \end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Adding Images And Figures"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Adding Images And Figures ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Adding Images And Figures}
+%%%#+END:
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-full-begin :mode "auto" :title "Adding Images And Figures" :subtitle "" :label "auto" :options "fragile" :audio "labeled" :transition "Trans" :onLeave "OnLeave"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=AddingImagesAndFigures*  Adding Images And Figures ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=AddingImagesAndFigures]
+    \transition{Trans}
+    \transitionout{OnLeave}
+    \frameaudio{"audio/AddingImagesAndFigures.mp3"}
+    \frametitle{Adding Images And Figures}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('AddingImagesAndFigures', 'always', 'True')
+%BxPy: impressiveFrameParSet('AddingImagesAndFigures', 'transition', 'Trans')
+%%%#+END:
+
+\begin{itemize}
+\item Within Blee, In YASnippet, Select bx-latex-mode -- Multi-Media Dblock -- Image ODG
+\item Specify a path to the .odg file
+\item Update the dblock
+\item From Panel.org -- Re-Build all forms and formats to verify
+\end{itemize}
+
+
+\pnote{
+  Frame Notes\\
+  \par
+}
+
+\end{frame}
+  
+
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Preparing For Voice-Over Narration" :toc 0 :label "auto"
+%%%% Args:  :toc "NU" :part "NU" :label "auto|spec"
+\begin{comment}
+*      ================
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  *Part 0*   /Preparing For Voice-Over Narration/ ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\newpage
+\part{Preparing For Voice-Over Narration}
+\label{part:PreparingForVoice-OverNarration}
+
+\begin{latexonly}
+\begin{presentationMode}
+\begin{frame}[fragile,plain,label=Part0]
+\frametitle{Outline of This Part -- Preparing For Voice-Over Narration}
+\tableofcontents[sectionstyle=show,subsectionstyle=show]
+\end{frame}
+\end{presentationMode}
+\end{latexonly}
+%%%#+END:
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Prepare For Audio And Video Additions"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Prepare For Audio And Video Additions ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Prepare For Audio And Video Additions}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-full-begin :mode "auto" :title "Prepare For Multi-Media Additions" :subtitle "" :label "auto" :options "fragile" :audio "labeled" :transition "Trans" :onLeave "OnLeave"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=PrepareForMulti-MediaAdditions*  Prepare For Multi-Media Additions ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=PrepareForMulti-MediaAdditions]
+    \transition{Trans}
+    \transitionout{OnLeave}
+    \frameaudio{"audio/PrepareForMulti-MediaAdditions.mp3"}
+    \frametitle{Prepare For Multi-Media Additions}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('PrepareForMulti-MediaAdditions', 'always', 'True')
+%BxPy: impressiveFrameParSet('PrepareForMulti-MediaAdditions', 'transition', 'Trans')
+%%%#+END:
+
+\begin{itemize}
+\item In Panel.org -- Run  lcntProc.sh -i mmUniteStart 
+\item Go to mmUnite Panel
+\item From ./MmUnitePanel.org -- Run  mmUnite.sh -h -v -n showRun -i screenCastingFullUpdate
+  This Creates ./disposition.gened/ Where each frame is numbered and labled.
+\end{itemize}
+
+
+\pnote{
+  Frame Notes\\
+  \par
+}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Adding Voice-Over Sounds To Slides"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Adding Voice-Over Sounds To Slides ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Adding Voice-Over Sounds To Slides}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-full-begin :mode "auto" :title "Adding Voice-Over Sounds To Slides" :subtitle "" :label "auto" :options "fragile" :audio "labeled" :transition "Trans" :onLeave "OnLeave"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=AddingVoice-OverSoundsToSlides*  Adding Voice-Over Sounds To Slides ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=AddingVoice-OverSoundsToSlides]
+    \transition{Trans}
+    \transitionout{OnLeave}
+    \frameaudio{"audio/AddingVoice-OverSoundsToSlides.mp3"}
+    \frametitle{Adding Voice-Over Sounds To Slides}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('AddingVoice-OverSoundsToSlides', 'always', 'True')
+%BxPy: impressiveFrameParSet('AddingVoice-OverSoundsToSlides', 'transition', 'Trans')
+%%%#+END:
+
+\begin{itemize}
+\item In ./CntntBase/audio from the Panel, run  mmUniteAudio.sh -h -v -n showRun -i frameNamesPrepare
+  This creates 1 sec silence files in .wav format for each of the files corresponding to labels
+  in the presentation file.
+\item In ./CntntBase/audio from the Panel Go to rec command and frameRecordCommand
+\item Click on each of the audacity frameFileName.wav
+\item Within audacity, export audio, overwrite extension as .wav
+\item When completed, run  mmUniteAudio.sh -i fullUpdate -- This will convert all the .wav files to .mp3 and 
+  figure their length.
+\end{itemize}
+
+\end{frame}
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Creating And Adding Videos And Screen Captures" :toc 0 :label "auto"
+%%%% Args:  :toc "NU" :part "NU" :label "auto|spec"
+\begin{comment}
+*      ================
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  *Part 0*   /Creating And Adding Videos And Screen Captures/ ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\newpage
+\part{Creating And Adding Videos And Screen Captures}
+\label{part:CreatingAndAddingVideosAndScreenCaptures}
+
+\begin{latexonly}
+\begin{presentationMode}
+\begin{frame}[fragile,plain,label=Part0]
+\frametitle{Outline of This Part -- Creating And Adding Videos And Screen Captures}
+\tableofcontents[sectionstyle=show,subsectionstyle=show]
+\end{frame}
+\end{presentationMode}
+\end{latexonly}
+%%%#+END:
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Creating And Adding Screencasts"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Creating And Adding Screencasts ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Creating And Adding Screencasts}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-full-begin :mode "auto" :title "Creating And Adding Screencasts" :subtitle "" :label "auto" :options "fragile" :audio "labeled" :transition "Trans" :onLeave "OnLeave"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=CreatingAndAddingScreencasts*  Creating And Adding Screencasts ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=CreatingAndAddingScreencasts]
+    \transition{Trans}
+    \transitionout{OnLeave}
+    \frameaudio{"audio/CreatingAndAddingScreencasts.mp3"}
+    \frametitle{Creating And Adding Screencasts}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('CreatingAndAddingScreencasts', 'always', 'True')
+%BxPy: impressiveFrameParSet('CreatingAndAddingScreencasts', 'transition', 'Trans')
+%%%#+END:
+
+\begin{itemize}
+\item In Panel.org -- Run  lcntProc.sh -i mmUniteStart 
+\item Go to mmUnite Panel
+\item From ./MmUnitePanel.org -- 
+\end{itemize}
+
+
+\pnote{
+  Frame Notes\\
+  \par
+}
+
+\end{frame}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "ScreenCast Initial Content Generation Setup"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   ScreenCast Initial Content Generation Setup ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{ScreenCast Initial Content Generation Setup}
+%%%#+END:
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "ScreenCast Initial Content Generation Setup" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ScreenCastInitialContentGenerationSetup*  ScreenCast Initial Content Generation Setup ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ScreenCastInitialContentGenerationSetup]
+    \transition{default}
+    \frameaudio{"audio/ScreenCastInitialContentGenerationSetup.mp3"}
+    \frametitle{ScreenCast Initial Content Generation Setup}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('ScreenCastInitialContentGenerationSetup', 'always', 'True')
+%BxPy: impressiveFrameParSet('ScreenCastInitialContentGenerationSetup', 'transition', 'default')
+%%%#+END:
+
+
+%%%#+BEGIN: bx:lcnt:body:video-presArt :videoBaseFile "./video/master-initialSetup.mp4" :presResolution "360" :artResolution "720"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Video/ =PresArt=  *master-initialSetup.mp4* -- initialSetup ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+\begin{htmlonly}
+  \begin{rawhtml}
+      <!-- data-autoplay  controls -->
+    <p>
+    <video     preload="auto"  src="./video/initialSetup-360.mp4" controls  height="80%" width="80%">
+    </video>
+    </p>
+  \end{rawhtml}
+\end{htmlonly}
+\end{presentationMode}
+
+\begin{articleMode}
+\begin{htmlonly}
+  \begin{rawhtml}
+      <!-- data-autoplay  controls -->
+    <p>
+    <video  controls   preload="auto"  src="./video/initialSetup-720.mp4"  height="50%" width="50%">
+    </video>
+    </p>
+  \end{rawhtml}
+\end{htmlonly}
+\end{articleMode}
+
+%%%#+END:
+
+\pnote{
+  Frame Notes\\
+  \par
+}
+
+\end{frame}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "ScreenCast VideoJS Setup"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   ScreenCast VideoJS Setup ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{ScreenCast VideoJS Setup}
+%%%#+END:
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "ScreenCast VideoJS Setup" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=ScreenCastVideoJSSetup*  ScreenCast VideoJS Setup ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=ScreenCastVideoJSSetup]
+    \transition{default}
+    \frameaudio{"audio/ScreenCastVideoJSSetup.mp3"}
+    \frametitle{ScreenCast VideoJS Setup}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('ScreenCastVideoJSSetup', 'always', 'True')
+%BxPy: impressiveFrameParSet('ScreenCastVideoJSSetup', 'transition', 'default')
+%%%#+END:
+
+
+%%%#+BEGIN: bx:lcnt:body:videoJs-presArt :videoBaseFile "./video/master-initialSetup.mp4" :presResolution "144" :artResolution "360"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /VideoJs/ =PresArt=  *master-initialSetup.mp4* -- initialSetup ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+\begin{htmlonly}
+  \begin{rawhtml}
+      <!-- VideoJs  controls -->
+
+<div>
+  <video id='initialSetup' class="video-js vjs-default-skin center" ></video>
+</div>
+
+  <script>
+    // fire up the plugin
+    videojs('initialSetup', {
+      controls: true,
+      muted: false,
+      width: 750,
+      plugins: {
+        videoJsResolutionSwitcher: {
+          ui: true,
+          default: '144', // 'low' Default resolution [{Number}, 'low', 'high'],
+          dynamicLabel: true // Display dynamic labels or gear symbol
+        }
+      }
+    }, function(){
+      var player = this;
+      window.player = player
+
+      player.updateSrc([
+        {
+          src: './video/initialSetup-144.mp4',
+          type: 'video/mp4',
+          label: '144',
+          res: 144
+        },
+        {
+          src: './video/initialSetup-360.mp4',
+          type: 'video/mp4',
+          label: '360',
+          res: 360
+        },
+        {
+          src: './video/initialSetup-720.mp4',
+          type: 'video/mp4',
+          label: '720',
+          res: 720
+        },
+        {
+          src: './video/initialSetup-1080.mp4',
+          type: 'video/mp4',
+          label: '1080',
+          res: 1080
+        }
+      ])
+
+      player.on('resolutionchange', function(){
+        console.info('Source changed to %s', player.src())
+      })
+
+    })
+  </script>
+
+  \end{rawhtml}
+\end{htmlonly}
+\end{presentationMode}
+
+\begin{articleMode}
+\begin{htmlonly}
+  \begin{rawhtml}
+      <!-- data-autoplay  controls -->
+    <p>
+    <video  controls   preload="auto"  src="./video/initialSetup-360.mp4"  height="50%" width="50%">
+    </video>
+    </p>
+  \end{rawhtml}
+\end{htmlonly}
+\end{articleMode}
+
+%%%#+END:
+
+\pnote{
+  Frame Notes\\
+  \par
+}
+
+\end{frame}
+
+
+
+
+
+%%%#+BEGINNOT: bx:dblock:lcnt:frame-narrated-begin :mode "auto" :title "VidoJs ScreenCast Setup" :subtitle "" :label "auto" :transition "default"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=VidoJsScreenCastSetup*  VidoJs ScreenCast Setup ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=VidoJsScreenCastSetup]
+    \transition{default}
+    \frameaudio{"audio/VidoJsScreenCastSetup.mp3"}
+    \frametitle{VidoJs ScreenCast Setup}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('VidoJsScreenCastSetup', 'always', 'True')
+%BxPy: impressiveFrameParSet('VidoJsScreenCastSetup', 'transition', 'default')
+%BxPy: impressiveFrameParSet('VidoJsScreenCastSetup', 'onLeave', 'UnSpecified')
+%%%#+END:
+
+
+\begin{presentationMode}
+\begin{htmlonly}
+  \begin{rawhtml}
+    <!-- data-autoplay  controls -->
+
+    <p>
+    <video  data-audio-controls   preload="auto"  src="./video/initialSetup-720.mp4"  height="80%" width="80%">
+    </video>
+    </p>
+  \end{rawhtml}
+\end{htmlonly}
+\end{presentationMode}
+
+
+\begin{articleMode}
+\begin{htmlonly}
+  \begin{rawhtml}
+    <!-- data-autoplay  controls -->
+
+    <p>
+    <video controls  preload="auto"  src="./video/initialSetup-720.mp4"  height="50%" width="50%">
+    </video>
+    </p>
+  \end{rawhtml}
+\end{htmlonly}
+\end{articleMode}
+
+\pnote{
+  Frame Notes\\
+  \par
+}
+
+\end{frame}
+
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Using ByStar Content Publication Facilities" :toc 0
+%%%% Args:  :toc "NU" :part "NU" :label "auto|spec"
+\begin{comment}
+*      ================
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  *Part 0*   /Using ByStar Content Publication Facilities/ ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\newpage
+\part{Using ByStar Content Publication Facilities}
+
+\begin{latexonly}
+\begin{presentationMode}
+\begin{frame}[fragile,plain,label=Part0]
+\frametitle{Outline of This Part -- Using ByStar Content Publication Facilities}
+\tableofcontents[sectionstyle=show,subsectionstyle=show]
+\end{frame}
+\end{presentationMode}
+\end{latexonly}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Publishing The Document"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Section/   Publishing The Document ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\section{Publishing The Document}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-full-begin :mode "auto" :title "Publishing The Document" :subtitle "" :label "auto" :options "fragile" :audio "labeled" :transition "Trans" :onLeave "OnLeave"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=PublishingTheDocument*  Publishing The Document ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=PublishingTheDocument]
+    \transition{Trans}
+    \transitionout{OnLeave}
+    \frameaudio{"audio/PublishingTheDocument.mp3"}
+    \frametitle{Publishing The Document}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('PublishingTheDocument', 'always', 'True')
+%BxPy: impressiveFrameParSet('PublishingTheDocument', 'transition', 'Trans')
+%%%#+END:
+
+\begin{itemize}
+\item In Panel.org -- Run  lcntProc.sh -i mmUniteStart 
+\item Go to mmUnite Panel
+\item From ./MmUnitePanel.org -- 
+\end{itemize}
+
+
+\pnote{
+  Frame Notes\\
+  \par
+}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Setting Up And Running Mailings And Distributions" :toc "0" :label "auto"
+%%%% Args:  :toc "NU" :part "NU" :label "auto|spec"
+\begin{comment}
+*      ================
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  *Part 0*   /Setting Up And Running Mailings And Distributions/ ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\newpage
+\part{Setting Up And Running Mailings And Distributions}
+\label{part:SettingUpAndRunningMailingsAndDistributions}
+
+\begin{latexonly}
+\begin{presentationMode}
+\begin{frame}[fragile,plain,label=Part0]
+\frametitle{Outline of This Part -- Setting Up And Running Mailings And Distributions}
+\tableofcontents[sectionstyle=show,subsectionstyle=show]
+\end{frame}
+\end{presentationMode}
+\end{latexonly}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:frame-full-begin :mode "auto" :title "Using The Document As Mailing For Distribution" :subtitle "" :label "auto" :options "fragile" :audio "labeled" :transition "Trans" :onLeave "OnLeave"
+\begin{comment}
+*****  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Frame/ *Label=UsingTheDocumentAsMailingForDistribution*  Using The Document As Mailing For Distribution ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{frame}[fragile,label=UsingTheDocumentAsMailingForDistribution]
+    \transition{Trans}
+    \transitionout{OnLeave}
+    \frameaudio{"audio/UsingTheDocumentAsMailingForDistribution.mp3"}
+    \frametitle{Using The Document As Mailing For Distribution}
+    \framesubtitle{}
+%BxPy: impressiveFrameParSet('UsingTheDocumentAsMailingForDistribution', 'always', 'True')
+%BxPy: impressiveFrameParSet('UsingTheDocumentAsMailingForDistribution', 'transition', 'Trans')
+%%%#+END:
+
+\begin{itemize}
+\item In Panel.org -- Run  lcntProc.sh -i mmUniteStart 
+\item Go to mmUnite Panel
+\item From ./MmUnitePanel.org -- 
+\end{itemize}
+
+
+\pnote{
+  Frame Notes\\
+  \par
+}
+
+\end{frame}
+
+
+
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]]  Local Vars  ::                  *Org-Mode And Emacs Specific Configurations*   [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+%% Local Variables:
+%% major-mode: latex-mode
+%% fill-column: 90
+%% End:

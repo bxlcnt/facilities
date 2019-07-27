@@ -1,5 +1,6 @@
 %%% -*- Mode: LaTeX; -*-
 %%%#+BEGIN: bx:dblock:lcnt:latex:doc-class :class "pres+art" :langs "en+fa"
+%%% Args: :class "pres+art|art+pres|art|memo|book" :langs "en+fa|fa+en|en"
 %\nonstopmode
 
 \documentclass[ignorenonframetext]{beamer}
@@ -8,9 +9,10 @@
 
 %%%#+BEGIN: bx:dblock:global:org-controls :disabledP "false" :mode "auto"
 \begin{comment}
-*  /Controls/ ::  [[elisp:(org-cycle)][| ]]  [[elisp:(show-all)][Show-All]]  [[elisp:(org-shifttab)][Overview]]  [[elisp:(progn (org-shifttab) (org-content))][Content]] | [[file:Panel.org][Panel]] | [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] | [[elisp:(delete-other-windows)][(1)]] | [[elisp:(progn (save-buffer) (kill-buffer))][S&Q]]  [[elisp:(save-buffer)][Save]]  [[elisp:(kill-buffer)][Quit]] [[elisp:(org-cycle)][| ]]
-*  /Maintain/ ::  [[elisp:(call-interactively (quote cvs-update))][cvs-update]]  [[elisp:(vc-update)][vc-update]] | [[elisp:(bx:org:agenda:this-file-otherWin)][Agenda-List]]  [[elisp:(bx:org:todo:this-file-otherWin)][ToDo-List]] 
-*      ================
+* /->/ [[elisp:(describe-function 'org-dblock-write:bx:dblock:global:org-controls)][(dblock-func]]
+*  /Controls/ ::  [[elisp:(org-cycle)][| ]]  [[elisp:(show-all)][Show-All]]  [[elisp:(org-shifttab)][|O]]  [[elisp:(progn (org-shifttab) (org-content))][|C]] | [[file:Panel.org][Panel]] | [[elisp:(blee:ppmm:org-mode-toggle)][|N]] | [[elisp:(delete-other-windows)][|1]] | [[elisp:(progn (save-buffer) (kill-buffer))][S&Q]]  [[elisp:(save-buffer)][Save]]  [[elisp:(kill-buffer)][Quit]] [[elisp:(org-cycle)][| ]]
+*  /Maintain/ ::  [[elisp:(call-interactively (quote cvs-update))][cvs-update]] | [[elisp:(bx:org:agenda:this-file-otherWin)][Agenda-This]] [[elisp:(bx:org:todo:this-file-otherWin)][ToDo-This]] | [[elisp:(bx:org:agenda:these-files-otherWin)][Agenda-These]] [[elisp:(bx:org:todo:these-files-otherWin)][ToDo-These]]
+* /<-/ [[elisp:(describe-function 'org-dblock-write:bx:dblock:global:org-controls)][dblock-func)]]  E|
 \end{comment}
 %%%#+END:
 
@@ -22,21 +24,24 @@
 
 %%%#+BEGIN: bx:dblock:lcnt:latex:inputed-title :disabledP "false" :mode "auto"
 \begin{comment}
-*      ================
+* /->/ [[elisp:(describe-function 'org-dblock-write:bx:dblock:lcnt:latex:inputed-title)][(dblock-func]]
 *  [[elisp:(beginning-of-buffer)][Top]] ################  [[elisp:(delete-other-windows)][(1)]]   /*PLPC-180060 -- LCNT Panel -- lcntProc.sh, presProc.sh and Mailings*/
 *  [[elisp:(beginning-of-buffer)][Top]] ################  [[elisp:(delete-other-windows)][(1)]]   *ByStar Autonomous Content Production And Administration Examples*
 *  [[elisp:(beginning-of-buffer)][Top]] ################  [[elisp:(delete-other-windows)][(1)]]   http://www.by-star.net/PLPC/180060
-*  [[elisp:(beginning-of-buffer)][Top]] ################  [[elisp:(delete-other-windows)][(1)]]   [[elisp:(find-file "presentationEnFa.ttytex")][Visit ./presentationEnFa.ttytex]] || [[elisp:(find-file "articleEnFa.ttytex")][Visit ./articleEnFa.ttytex]] || [[elisp:(find-file "presArtEnFa.ttytex")][Visit ./presArtEnFa.ttytex]] || 
+*  [[elisp:(beginning-of-buffer)][Top]] ################  [[elisp:(delete-other-windows)][(1)]]   [[elisp:(find-file "presentationEnFa.ttytex")][Visit ./presentationEnFa.ttytex]] || [[elisp:(find-file "presArtEnFa.ttytex")][Visit ./presArtEnFa.ttytex]] || 
+* /<-/ [[elisp:(describe-function 'org-dblock-write:bx:dblock:lcnt:latex:inputed-title)][dblock-func)]]  E|
 \end{comment}
 %%%#+END:
 
 %%%#+BEGIN: bx:dblock:lcnt:latex:commands :disabledP "false" :class "pres+art" :langs "en+fa"
 \begin{comment}
-*      ================
+* /->/ [[elisp:(describe-function 'org-dblock-write:bx:dblock:lcnt:latex:commands)][(dblock-func]]
+\begin{comment}
 *      IIM Parameters    ::  [[elisp:(bx:iimBash:resultsShow:cmndLineElems)][Show Cmnd Line Elems]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=build+view")][-p extent=build+view]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=build")][-p extent=build]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=view")][-p extent=view]]
 *      Related           ::  [[elisp:(find-file "./Panel.org")][Visit ./Panel.org]] | [[elisp:(find-file "./mailing/content.mail")][Visit ./mailing/content.mail]]| [[elisp:(find-file "./mailing/Panel.org")][Visit ./mailing/Panel.org]]
 *      Build+Release     ::  [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildResultsRelease" :iifArgs "")][lcntProc.sh -i buildResultsRelease]] || [[elisp:(lsip-local-run-command-here "lcntProc.sh -i fullClean")][lcntProc.sh -i fullClean]] || [[elisp:(cvs-update "." t)][Version Control]]
 *      Build & Preview   ::  [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildPdfPreview" :iifArgs "presentationEnFa.ttytex")][lcntProc.sh -i buildPdfPreview presentationEnFa.ttytex]] || [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildHtmlPreview" :iifArgs "presentationEnFa.ttytex")][lcntProc.sh -i buildHtmlPreview presentationEnFa.ttytex]]
+* /<-/ [[elisp:(describe-function 'org-dblock-write:bx:dblock:lcnt:latex:commands)][dblock-func)]]  E|
 \end{comment}
 %%%#+END:
 
@@ -44,6 +49,7 @@
 \begin{comment}
 *      ################ CONTENTS-LIST  [[elisp:(reftex-toc)][(RefTOC)]] ###############
 *  [[elisp:(org-cycle)][| ]]  *Document Status, TODOs and Notes*          ::  [[elisp:(org-cycle)][| ]]
+*  /OBSOLETED by  org-dblock-write:bx:global:org-contents-list/
 \end{comment}
 %%%#+END:
 
@@ -53,9 +59,8 @@
 
 %%%#+BEGIN: bx:dblock:lcnt:latex:early-common-packages :class "pres+art" :langs "en+fa"
 \begin{comment}
-*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /DBLOCK: early-common-packages/  ::  [[elisp:(org-cycle)][| ]]
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /DBLOCK: early-common-packages/  ::  [[elisp:(org-cycle)][| ]]
 \end{comment}
-
 %%%\nonstopmode
 
 %%%\documentclass[ignorenonframetext]{beamer}
@@ -84,29 +89,29 @@
 
 %%%#+BEGIN: bx:dblock:lcnt:latex:optional-packages-and-styles :class "pres+art" :langs "en+fa"
 \begin{comment}
-*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /DBLOCK: optional-packages-and-styles/  ::  [[elisp:(org-cycle)][| ]]
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /DBLOCK: optional-packages-and-styles/  ::  [[elisp:(org-cycle)][| ]]
 \end{comment}
-
 %%%#+END:
 
 %%%#+BEGIN: bx:dblock:lcnt:latex:custom-specialized-packages :class "pres+art" :langs "en+fa"
 \begin{comment}
-*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /DBLOCK: custom-specialized-packages/  ::  [[elisp:(org-cycle)][| ]]
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /DBLOCK: custom-specialized-packages/  ::  [[elisp:(org-cycle)][| ]]
 \end{comment}
-
 %%%#+END:
 
 %%%#+BEGIN: bx:dblock:lcnt:latex:late-common-packages :class "pres+art" :langs "en+fa"
 \begin{comment}
-*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /DBLOCK: late-common-packages/  ::  [[elisp:(org-cycle)][| ]]
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /DBLOCK: late-common-packages/  ::  [[elisp:(org-cycle)][| ]]
 \end{comment}
-
 \usepackage{color}
 
 \usepackage{hyperref}
 \usepackage{url}
 
+\usepackage{multicol}
+
 \usepackage{fontspec}
+% \usepackage{xltxtra}  % OBSOLETED In Ubuntu 16.04 and 18.04
 \usepackage{xunicode}
 
 \newenvironment{bidiSepBeforeHevea}{}{}
@@ -119,8 +124,9 @@
 %%%#+END:
 
 %%%#+BEGIN: bx:dblock:lcnt:latex:common-packages-style-settings :class "pres+art" :langs "en+fa"
+%%% Args: :class "pres+art" :langs "en+fa" :pageNu nil|t :style "bystar"
 \begin{comment}
-*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /DBLOCK: common-packages-style-settings/  ::  [[elisp:(org-cycle)][| ]]
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /DBLOCK: common-packages-style-settings/  ::  [[elisp:(org-cycle)][| ]]
 \end{comment}
 \mode<presentation>
 {
@@ -129,47 +135,6 @@
   \setbeamercovered{transparent}
   % or whatever (possibly just delete it)
 }
-
-% ===== STYLE PARAMETERS =====
-
-\definecolor{darkred}{rgb}{0.5,0,0}
-\definecolor{darkgreen}{rgb}{0,0.5,0}
-\definecolor{darkblue}{rgb}{0,0,0.5}
-
-\hypersetup{
-    colorlinks=true        % false: boxed links; true: colored links
-}
-
-
-%%%#+END:
-
-%%%#+BEGIN: bx:dblock:lcnt:latex:begin-document  :class "pres+art" :langs "en+fa"
-\begin{comment}
-*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /DBLOCK: begin-document/  ::  [[elisp:(org-cycle)][| ]]
-\end{comment}
-\begin{document}
-
-%%%#+END:
-
-%%%   :form "std" :years "2018" :copyright-holders ""
-%%%#+BEGIN: bx:dblock:lcnt:latex:copyright :class "pres+art" :langs "en+fa" :form "none" :years "2018" :copyright-holders ""
-%%%% Args:  :form "none|std" :years "" :copyright-holders ""
-\begin{comment}
-*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /DBLOCK: Copyright Settings -- None/  ::  [[elisp:(org-cycle)][| ]]
-\end{comment}
-% dblock copyright notice says none
-%%%#+END:
-
-
-%%%#+BEGIN: bx:dblock:lcnt:latex:title-page :class "pres+art" :langs "en+fa"
-%%%% Args:  :form "priv|std" :coverPage "blank|std"
-\begin{comment}
-*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /DBLOCK: title-page/  ::  [[elisp:(org-cycle)][| ]]
-\end{comment}
-
-\mode<all>  % Important -- Must Be Here
-
-\begin{latexonly}
 
 \title[ByStar Autonomous Content Production And Administration Examples]
 {ByStar Autonomous Content Production And Administration Examples}
@@ -189,6 +154,60 @@ Email: \href{http://www.by-star.net}{http://www.by-star.net}\\
 {April 22, 2019}
 
 \subject{ByStar Autonomous Content Production And Administration Examples}
+
+\defbeamertemplate*{footline}{shadow theme}
+{%
+  \leavevmode%
+  \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fil,rightskip=.3cm]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertframenumber\,/\,\inserttotalframenumber\hfill\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle%
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+	
+% ===== STYLE PARAMETERS =====
+
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+
+\hypersetup{
+    colorlinks=true        % false: boxed links; true: colored links
+}
+
+
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:latex:begin-document  :class "pres+art" :langs "en+fa"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /DBLOCK: begin-document/  ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+\begin{document}
+
+%%%#+END:
+
+%%%   :form "std" :years "2018" :copyright-holders ""
+%%%#+BEGIN: bx:dblock:lcnt:latex:copyright :class "pres+art" :langs "en+fa" :form "none" :years "2018" :copyright-holders ""
+%%% Args: :class "book|pres+art" :langs "en+fa" :toggle "enabled|disabled|hide" :form "none|std" :years "" :copyright-holders nil|"Name"
+\begin{comment}
+**  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /DBLOCK: Copyright Settings --- bx-years=None/  == ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+% dblock copyright notice says none
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex:title-page :class "pres+art" :langs "en+fa"
+%%%% Args:  :form "priv|std" :coverPage "blank|std"
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /DBLOCK: title-page/  ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\mode<all>  % Important -- Must Be Here
+
+\begin{latexonly}
 
 % No Blank Cover Page -- Select dblock :coverPage blank if desired
 
@@ -232,7 +251,7 @@ April 22, 2019}
 
 %%%#+BEGIN: bx:dblock:lcnt:latex:toc  :class "pres+art" :langs "en+fa"
 \begin{comment}
-*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /DBLOCK: Table Of Contents/  ::  [[elisp:(org-cycle)][| ]]
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /DBLOCK: Table Of Contents/  ::  [[elisp:(org-cycle)][| ]]
 \end{comment}
 \bibliographystyle{plain}
 
@@ -251,7 +270,7 @@ April 22, 2019}
 
 %%%#+BEGIN: bx:dblock:org:latex-input :disabledP "false" :input-file "./bodyPresArtEnFa.tex"
 \begin{comment}
-*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Input/  [[elisp:(blee:file-goto-contents "./bodyPresArtEnFa.tex")][Goto ./bodyPresArtEnFa.tex]] ::  [[elisp:(org-cycle)][| ]]
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /Input/  [[elisp:(blee:file-goto-contents "./bodyPresArtEnFa.tex")][Goto ./bodyPresArtEnFa.tex]] ::  [[elisp:(org-cycle)][| ]]
 \end{comment}
 
 \input{./bodyPresArtEnFa.tex}
@@ -259,14 +278,14 @@ April 22, 2019}
 
 %%%#+BEGIN: bx:dblock:lcnt:latex:bibliography :disabledP "false" :class "pres+art" :langs "en+fa"
 \begin{comment}
-*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /DBLOCK: Bibliography/  ::  [[elisp:(org-cycle)][| ]]
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /DBLOCK: Bibliography/  ::  [[elisp:(org-cycle)][| ]]
 \end{comment}
 \bibliography{/lcnt/outputs/all/plpcUrl,/usr/local/lib/bib/rfcs}
 %%%#+END:
 
 %%%#+BEGIN: bx:dblock:lcnt:latex:document-end  :disabledP "false" :class "pres+art" :langs "en+fa"
 \begin{comment}
-*  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /DBLOCK: End-Of-Document/  ::  [[elisp:(org-cycle)][| ]]
+*  [[elisp:(org-cycle)][| ]] [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(bx:orgm:indirectBufOther)][|>]] [[elisp:(bx:orgm:indirectBufMain)][|I]] [[elisp:(blee:ppmm:org-mode-toggle)][|N]] [[elisp:(org-top-overview)][|O]] [[elisp:(progn (org-shifttab) (org-content))][|C]] [[elisp:(delete-other-windows)][|1]]  /DBLOCK: End-Of-Document/  ::  [[elisp:(org-cycle)][| ]]
 \end{comment}
 
 \end{document}
